@@ -1,0 +1,23 @@
+# --- Backend (Python) ---
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/.pytest_cache/
+backend/database.db
+backend/compressed_files/
+*.pyc
+
+# --- Frontend (Node / Vite) ---
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/*.local
+
+# --- Misc / stray test artifacts ---
+*.gz
+.DS_Store
+Thumbs.db
+
+# --- Editor ---
+.vscode/
+.idea/
