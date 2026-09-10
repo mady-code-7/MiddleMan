@@ -38,3 +38,12 @@
   opacity: 0.6;
   text-align: center;
 }
+
+.app__error {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--danger);
+  background: rgba(217, 105, 95, 0.1);
+  color: var(--danger);
+  font-size: 13px;
+}
