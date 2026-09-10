@@ -1,0 +1,19 @@
+# Render Blueprint for the MiddleMan backend.
+# This documents the exact deployment configuration -- see PROJECT_PLAN.md
+# Section 10.2 for why a Web Service (not a Static Site) is used here.
+#
+# You can either let Render auto-detect these settings when creating the
+# Web Service manually in the dashboard, or point Render at this file
+# directly ("New > Blueprint") to have it read this config automatically.
+
+services:
+  - type: web
+    name: middleman-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
