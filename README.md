@@ -6,7 +6,7 @@ MiddleMan is a tool for slow or limited internet connections. Instead of downloa
 
 > Think of it like a middleman who does the heavy lifting on a fast connection, then hands you a lighter package to carry home over your slow one.
 
-Submitted as **"Cloud-Based Adaptive Content Compression and Delivery System"** for a college assignment spanning Cloud Computing, Data Communication & Networking, and Software Testing & Quality Assurance.
+Submitted also as **"Cloud-Based Adaptive Content Compression and Delivery System"**
 
 ---
 
@@ -67,10 +67,4 @@ python app.py
 
 The frontend expects the backend API to be reachable — see `frontend/.env` (or the relevant config) for the API base URL when running both locally.
 
-## Status
-
-Actively being built as part of a 3-month college project. Frontend layout is in progress; backend and deployment steps are next.
-
 ---
-
-*Built solo as a BCA student project at Amity University Noida.*
