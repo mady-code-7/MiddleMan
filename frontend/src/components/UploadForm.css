@@ -1,0 +1,122 @@
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.upload-form__tabs {
+  display: inline-flex;
+  gap: 2px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 3px;
+  width: fit-content;
+}
+
+.upload-form__tab {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 13px;
+  font-family: var(--font-mono);
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.upload-form__tab.is-active {
+  background: var(--panel-raised);
+  color: var(--text);
+}
+
+.upload-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.upload-form__field label {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.upload-form__field input[type='url'] {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 12px 14px;
+  width: 100%;
+  transition: border-color 0.15s ease;
+}
+
+.upload-form__field input[type='url']:focus {
+  border-color: var(--accent);
+}
+
+.upload-form__field input[type='url']::placeholder {
+  color: var(--text-dim);
+  opacity: 0.6;
+}
+
+.upload-form__dropzone {
+  position: relative;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 20px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.upload-form__dropzone:hover {
+  border-color: var(--accent-dim);
+  background: var(--panel);
+}
+
+.upload-form__dropzone input[type='file'] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-form__dropzone-text {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  pointer-events: none;
+}
+
+.upload-form__submit {
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: #1a1208;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.upload-form__submit:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.upload-form__submit:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.upload-form__submit:disabled {
+  background: var(--panel-raised);
+  color: var(--text-dim);
+  cursor: not-allowed;
+}

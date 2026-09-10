@@ -1,0 +1,62 @@
+.subject-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  animation: slide-in 0.25s ease;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subject-banner__icon {
+  font-size: 18px;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.subject-banner__title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 3px;
+}
+
+.subject-banner__body {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.subject-banner--cloud {
+  border-left: 2px solid var(--accent);
+}
+.subject-banner--cloud .subject-banner__title {
+  color: var(--accent);
+}
+
+.subject-banner--networking {
+  border-left: 2px solid #6fa8dc;
+}
+.subject-banner--networking .subject-banner__title {
+  color: #6fa8dc;
+}
+
+.subject-banner--testing {
+  border-left: 2px solid var(--success);
+}
+.subject-banner--testing .subject-banner__title {
+  color: var(--success);
+}

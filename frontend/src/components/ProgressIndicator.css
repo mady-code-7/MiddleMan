@@ -1,0 +1,52 @@
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.progress__step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-dim);
+  transition: color 0.2s ease;
+}
+
+.progress__step.is-active {
+  color: var(--text);
+}
+
+.progress__step.is-complete {
+  color: var(--success);
+}
+
+.progress__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  flex-shrink: 0;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.progress__step.is-active .progress__dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.progress__step.is-complete .progress__dot {
+  background: var(--success);
+  box-shadow: none;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
